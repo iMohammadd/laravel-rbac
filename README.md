@@ -75,7 +75,7 @@ $role->abilities()->attach($abilities);
 ***Usage***
 ---
 this package defined Gate for each ability and you can use it in middlewares, controllers or views by default.  
-read [official document for Gate and Policy.]('https://laravel.com/docs/authorization')  
+read [official document for Gate and Policy.](https://laravel.com/docs/authorization)  
 also you can check a user has a role or ability throgh user model:
 ```php
 $user = App\Models\User::first();
