@@ -1,0 +1,32 @@
+{
+    "name": "aries/laravel-rbac",
+    "description": "role based access control for laravel framework",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aries\\LaravelRbac\\": "src/",
+            "Aries\\LaravelRbac\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aries\\LaravelRbac\\LaravelRbacServiceProvider",
+                "Aries\\LaravelRbac\\LaravelRbacAuthServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohammad Mohammadi",
+            "email": "imohammadd@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^6.21"
+    }
+}
