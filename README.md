@@ -9,6 +9,12 @@ install via composer:
 
 ``composer require aries/laravel-rbac``
 
+publish environment:  
+``php artisan vendor:publish --provider='Aries\LaravelRbac\LaravelRbacServiceProvider'``
+
+enable package in `.env` file:  
+``RBAC_ENABLE=true``
+
 then run migration to create roles and abilitie table:
 
 ``php artisan migrate``
