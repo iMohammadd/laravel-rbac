@@ -28,7 +28,7 @@ class LaravelRbacAuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        if(Schema::hasTable('abilities')) {
+        if(config('laravel-rbac.enable') && Schema::hasTable('abilities')) {
             foreach (Ability::all() as $ability) {
                 Gate::define($ability->name, function (User $user) use ($ability) {
                     return $user->hasAbility($ability->name);
